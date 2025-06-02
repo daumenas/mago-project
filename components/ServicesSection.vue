@@ -90,5 +90,9 @@
     color: var(--primary-color);
     margin-bottom: 1rem;
   }
+  .section {
+    padding: 4rem 1rem;
+    background: transparent;
+  }
   </style>
   

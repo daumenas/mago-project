@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-visuals">
+  <div class="page-background">
     <Navbar />
     <NuxtPage />
     <Footer />
@@ -27,8 +27,17 @@ body::before {
   pointer-events: none;
   z-index: -1;
 }
-body {
-  background: linear-gradient(160deg, #f9f6ff, #e9dcf6, #f6f2ff);
-  background-attachment: fixed;
+.page-background {
+  background: linear-gradient(
+    to bottom,
+    #0d0b10 0%,
+    #1a0e1f 10%,
+    #22142b 25%,
+    #2c1a3c 50%,
+    #3c2452 75%,
+    #f1edf8 100%
+  ) !important;
+  min-height: 100vh;
+  width: 100%;
 }
 </style>

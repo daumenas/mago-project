@@ -36,10 +36,10 @@
   const links = [
     { label: 'Home', id: 'hero' },
     { label: 'News', id: 'news' },
-    { label: 'Development', id: 'development' },
-    { label: 'Services', id: 'services' },
     { label: 'Portfolio', id: 'portfolio' },
+    { label: 'Development', id: 'development' },
     { label: 'Equipment', id: 'equipment' },
+    { label: 'Services', id: 'services' },
     { label: 'About', id: 'about' },
     { label: 'Contact', id: 'contact' }
   ]

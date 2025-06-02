@@ -33,8 +33,8 @@
   
   <style scoped>
   .section {
-    padding: 4rem 1rem;
-    background: #f9f8fd;
+  background: transparent;
+  padding: 4rem 1rem;
   }
   
   .container {
@@ -89,36 +89,6 @@
   
   .social-icons a:hover {
     color: #4e2392;
-  }
-  
-  .contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    font-size: 1rem;
-  }
-  
-  .contact-form button {
-    background: var(--primary-color, #6a0dad);
-    color: white;
-    padding: 0.75rem;
-    border: none;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .contact-form button:hover {
-    background: #4e2392;
   }
   
   @media (max-width: 768px) {

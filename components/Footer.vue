@@ -19,11 +19,10 @@
   
   <style scoped>
 .footer {
-  background: #f3f0fb; /* lighter background */
-  color: #333;
-  padding: 2rem 1rem;
+  background: transparent;
+  padding: 4rem 1rem;
   text-align: center;
-  border-top: 1px solid #ddd;
+  /* border-top: 1px solid #ddd; */
 }
 
 .footer-container {

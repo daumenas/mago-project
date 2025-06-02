@@ -80,8 +80,8 @@
   
   <style scoped>
   .section {
-    padding: 4rem 1rem;
-    background: #f9f8fd;
+  background: transparent;
+  padding: 4rem 1rem;
   }
   
   .container {

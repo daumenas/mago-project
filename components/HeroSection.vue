@@ -1,78 +1,97 @@
 <template>
-    <section id="hero" class="hero-section">
-      <div class="container">
-        <div class="video-wrapper">
-          <video
-            controls
-            poster="/equipment/fx3.jpg"
-            class="trailer-video"
-          >
-            <source src="/homepage/trailer.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-  
-        <div class="hero-content">
-          <h1 class="hero-title">Capturing Stories That Move</h1>
-          <p class="hero-subtitle">Professional media production. Cinematic excellence.</p>
-          <a href="#portfolio" class="hero-button">View Portfolio</a>
-        </div>
+  <section class="hero" id="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="/homepage/trailer.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Visual Storytelling That Inspires</h1>
+        <p>High-end media production for music, film, and commercial projects</p>
+        <a href="#portfolio" class="cta-button">Explore Portfolio</a>
       </div>
-    </section>
-  </template>
-  
-  <style scoped>
-  .hero-section {
-    padding: 4rem 1rem;
-    background: #fff;
-    text-align: center;
+    </div>
+  </section>
+</template>
+
+<style scoped>
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #0d0b10;
+  padding: 4rem 1rem;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(20, 10, 30, 0.5));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.hero-content {
+  color: white;
+  max-width: 800px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background: var(--primary-color, #6a0dad);
+  padding: 0.75rem 1.5rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #4e2392;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
   }
-  
-  .container {
-    max-width: 1000px;
-    margin: 0 auto;
+
+  .hero-content p {
+    font-size: 1rem;
   }
-  
-  .video-wrapper {
-    margin-bottom: 2rem;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.08);
-  }
-  
-  .trailer-video {
-    width: 75%;
-    height: 75%;
-    border: none;
-  }
-  
-  .hero-content {
-    padding: 0 1rem;
-  }
-  
-  .hero-title {
-    font-size: 2.4rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color, #6a0dad);
-  }
-  
-  .hero-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: #555;
-  }
-  
-  .hero-button {
-    background: var(--primary-color, #6a0dad);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-  }
-  
-  .hero-button:hover {
-    background: var(--primary-dark, #4e2392);
-  }
-  </style>
-  
+}
+</style>

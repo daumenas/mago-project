@@ -2,10 +2,10 @@
   <div>
     <HeroSection />
     <NewsSection />
-    <DevelopmentSection />
-    <ServicesSection />
     <PortfolioSection />
+    <DevelopmentSection />
     <EquipmentSection />
+    <ServicesSection />
     <AboutSection />
     <ContactSection />
   </div>

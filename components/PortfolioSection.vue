@@ -32,8 +32,8 @@
   
   <style scoped>
   .section {
-    padding: 4rem 1rem;
-    background: #fff;
+  background: transparent;
+  padding: 4rem 1rem;
   }
   
   .container {

@@ -108,8 +108,8 @@
     color: #555;
   }
   .section {
+  background: transparent;
   padding: 4rem 1rem;
-  background-color: transparent;
 }
 
 .container {
