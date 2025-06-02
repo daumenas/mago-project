@@ -1,7 +1,7 @@
 <template>
     <section id="services" class="section">
       <div class="container">
-        <h2>Our Services</h2>
+        <h2 class="section-title">Our Services</h2>
         <div class="services-grid">
           <div
             v-for="(service, index) in services"
@@ -68,31 +68,59 @@
   </script>
   
   <style scoped>
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  .service-card {
-    background-color: white;
-    border-radius: 12px;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-  }
-  .service-card:hover {
-    transform: translateY(-5px);
-  }
-  .service-icon {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-  }
-  .section {
-    padding: 4rem 1rem;
-    background: transparent;
-  }
+.section {
+  padding: 4rem 1rem;
+  background: transparent;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #d3b6ff;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-items: center;
+}
+
+.service-card {
+  background-color: #f8f5ff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 280px;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color, #6a0dad);
+  margin-bottom: 1rem;
+}
+
+.service-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #2e1442;
+}
+
+.service-description {
+  font-size: 0.95rem;
+  color: #5d4b6e;
+}
+
   </style>
   

@@ -20,7 +20,7 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: #0d0b10;
+  background: transparent;
   padding: 4rem 1rem;
 }
 
@@ -59,11 +59,13 @@
   font-size: 2.8rem;
   margin-bottom: 1rem;
   line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .hero-content p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .cta-button {

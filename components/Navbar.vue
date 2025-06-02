@@ -71,7 +71,7 @@ const { navigate } = useScrollTo(40) // pass custom offset if needed
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(12px);
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #f1edf8;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   }
   

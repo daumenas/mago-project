@@ -56,64 +56,70 @@
   }
   
   .section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 3rem;
-    color: var(--primary-color, #6a0dad);
-  }
-  
-  .news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-  
-  .news-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease;
-  }
-  
-  .news-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .news-thumb {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-  }
-  
-  .news-content {
-    padding: 1.5rem;
-    flex: 1;
-  }
-  
-  .news-date {
-    font-size: 0.85rem;
-    color: #888;
-  }
-  
-  .news-title {
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
-    color: #222;
-  }
-  
-  .news-summary {
-    font-size: 0.95rem;
-    color: #444;
-    margin-bottom: 1rem;
-  }
-  
-  .news-link {
-    font-weight: 600;
-    color: var(--primary-color, #6a0dad);
-    text-decoration: none;
-  }
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #e0cfff; /* pastel lavender */
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.news-card {
+  background: #faf6ff; /* soft off-white with violet tint */
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.12);
+}
+
+.news-thumb {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.news-content {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.news-date {
+  font-size: 0.85rem;
+  color: #9a8cae;
+}
+
+.news-title {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d123f;
+}
+
+.news-summary {
+  font-size: 0.95rem;
+  color: #4a3269;
+  margin-bottom: 1rem;
+}
+
+.news-link {
+  font-weight: 600;
+  color: #6a0dad;
+  text-decoration: none;
+}
+
+.news-link:hover {
+  color: #9155e8;
+}
   </style>
   
