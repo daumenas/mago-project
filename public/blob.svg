@@ -1,0 +1,11 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="position:absolute; top:-200px; left:-150px; width:140%; z-index:0; pointer-events:none; opacity:0.25;">
+  <defs>
+    <radialGradient id="grad1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6a0dad" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#8e44ad" stop-opacity="0.2" />
+    </radialGradient>
+  </defs>
+  <circle cx="400" cy="300" r="280" fill="url(#grad1)">
+    <animate attributeName="r" values="260;300;260" dur="14s" repeatCount="indefinite" />
+  </circle>
+</svg>
