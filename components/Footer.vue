@@ -1,7 +1,7 @@
 <template>
     <footer class="footer">
       <div class="footer-container">
-        <p>&copy; {{ new Date().getFullYear() }} Mago Media</p>
+        <p>&copy; Mago Media</p>
         <div class="social-icons">
           <a href="https://instagram.com/magomediamx" target="_blank" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
