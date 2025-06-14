@@ -1,15 +1,15 @@
 <template>
     <footer class="footer">
       <div class="footer-container">
-        <p>&copy; {{ new Date().getFullYear() }} Your Media Company</p>
+        <p>&copy; {{ new Date().getFullYear() }} Mago Media</p>
         <div class="social-icons">
-          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <a href="https://instagram.com/magomediamx" target="_blank" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <a href="https://facebook.com/magomediamx" target="_blank" aria-label="Facebook">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+          <a href="https://youtube.com/@Magomediamx" target="_blank" aria-label="YouTube">
             <i class="fab fa-youtube"></i>
           </a>
         </div>

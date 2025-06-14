@@ -7,6 +7,10 @@
   --text-light: #ffffff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;

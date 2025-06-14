@@ -5,6 +5,11 @@
         <p class="section-description">
           Click any item to view its gallery.
         </p>
+        <div class="catalog-download">
+          <a href="/equipment/Rental-Catalog.pdf" target="_blank" class="catalog-btn">
+            Download Full Equipment Catalog (PDF)
+          </a>
+        </div>
   
         <div class="equipment-grid">
           <div
@@ -17,12 +22,6 @@
             <h3>{{ item.name }}</h3>
             <p>{{ item.category }}</p>
           </div>
-        </div>
-  
-        <div class="catalog-download">
-          <a href="/equipment/catalog.pdf" target="_blank" class="catalog-btn">
-            Download Full Equipment Catalog (PDF)
-          </a>
         </div>
   
         <div v-if="activeIndex !== null" class="lightbox" @click.self="closeGallery">
@@ -50,57 +49,131 @@
   
   const equipment = [
     {
-      name: 'RED Komodo 6K',
-      category: 'Camera',
+      name: 'Adaptadop Sony XLR',
+      category: 'Cámaras',
       images: [
-        '/portfolio/test1/gopro2.jpg',
-        '/portfolio/test1/gopro2.jpg',
-        '/portfolio/test1/shinobi2.jpg'
+        '/equipment/adaptadorsony/adaptadorsony1.jpg',
+        '/equipment/adaptadorsony/adaptadorsony2.jpg',
+        '/equipment/adaptadorsony/adaptadorsony3.jpg',
+        '/equipment/adaptadorsony/adaptadorsony4.jpg',
+        '/equipment/adaptadorsony/adaptadorsony5.jpg',
+      ]
+    },
+        {
+      name: 'Sony FX30',
+      category: 'Cámaras',
+      images: [
+        '/equipment/fx30/fx30.jpg',
+        '/equipment/fx30/fx302.jpg',
+        '/equipment/fx30/fx303.jpg'
       ]
     },
     {
-      name: 'Aputure 600D',
-      category: 'Lighting',
+      name: 'Sony FX3',
+      category: 'Cámaras',
       images: [
-        '/equipment/aputure/1.jpg',
-        '/equipment/aputure/2.jpg',
-        '/equipment/aputure/3.jpg'
+        '/equipment/fx3/fx3.jpg',
+        '/equipment/fx3/fx3-2.jpg',
+      ]
+    },
+        {
+      name: 'Go Pro Hero 9 + Accesorios',
+      category: 'Cámaras',
+      images: [
+        '/equipment/gopro/gopro.jpg',
+        '/equipment/gopro/gopro2.jpg',
+        '/equipment/gopro/gopro3.jpg',
+        '/equipment/gopro/gopro4.jpg',
       ]
     },
     {
-      name: 'RED Komodo 6K',
-      category: 'Camera',
+      name: 'Neewer Top Handle',
+      category: 'Accesorios para cámaras',
       images: [
-        '/portfolio/test1/gopro2.jpg',
-        '/portfolio/test1/gopro2.jpg',
-        '/portfolio/test1/shinobi2.jpg'
+        '/equipment/tophandle/tophandle.jpg',
+        '/equipment/tophandle/tophandle-2.jpg',
+        '/equipment/tophandle/tophandle-3.jpg'
       ]
     },
-    {
-      name: 'RED Komodo 6K',
-      category: 'Camera',
+        {
+      name: 'Neewer F100',
+      category: 'Accesorios para cámaras',
       images: [
-        '/portfolio/test1/gopro2.jpg',
-        '/portfolio/test1/gopro2.jpg',
-        '/portfolio/test1/shinobi2.jpg'
+        '/equipment/neewerf/neewerf110.jpg',
+        '/equipment/neewerf/neewerf1100-2.jpg',
+        '/equipment/neewerf/neewerf1100-3.jpg'
       ]
     },
-    {
-      name: 'RED Komodo 6K',
-      category: 'Camera',
+        {
+      name: 'Shinobi',
+      category: 'Accesorios para cámaras',
       images: [
-        '/portfolio/test1/gopro2.jpg',
-        '/portfolio/test1/gopro2.jpg',
-        '/portfolio/test1/shinobi2.jpg'
+        '/equipment/shinobi/shinobi.jpg',
+        '/equipment/shinobi/shinobi2.jpg',
+        '/equipment/shinobi/shinobi3.jpg'
       ]
     },
-    {
-      name: 'RED Komodo 6K',
-      category: 'Camera',
+        {
+      name: 'Sony 24-70MM',
+      category: 'Accesorios para cámaras',
       images: [
-        '/portfolio/test1/gopro2.jpg',
-        '/portfolio/test1/gopro2.jpg',
-        '/portfolio/test1/shinobi2.jpg'
+        '/equipment/sony24/sony24-1.jpg',
+        '/equipment/sony24/sony24-2.jpg',
+        '/equipment/sony24/sony24-3.jpg',
+        '/equipment/sony24/sony24-4.jpg',
+        '/equipment/sony24/sony24-5.jpg',
+      ]
+    },
+        {
+      name: 'Tamron 17-28MM',
+      category: 'Accesorios para cámaras',
+      images: [
+        '/equipment/tamron/tamron-1.jpg',
+        '/equipment/tamron/tamron-2.jpg',
+        '/equipment/tamron/tamron-3.jpg'
+      ]
+    },
+        {
+      name: 'Sony Telefono',
+      category: 'Accesorios para cámaras',
+      images: [
+        '/equipment/telefono/telefono-1.jpg',
+        '/equipment/telefono/telefono-2.jpg',
+        '/equipment/telefono/telefono-3.jpg'
+      ]
+    },
+            {
+      name: 'RGB Blink Mixer - Switcher',
+      category: 'Accesorios de video profesional',
+      images: [
+        '/equipment/rgb/rgb-1.jpg',
+        '/equipment/rgb/rgb-2.jpg',
+        '/equipment/rgb/rgb-3.jpg'
+      ]
+    },
+            {
+      name: 'Neewer Bicolor LED',
+      category: 'Iluminación para video y fotografía',
+      images: [
+        '/equipment/led/led-1.jpg',
+        '/equipment/led/led-2.jpg',
+        '/equipment/led/led-3.jpg',
+        '/equipment/led/led-4.jpg',
+        '/equipment/led/led-5.jpg',
+        '/equipment/led/led-6.jpg',
+        '/equipment/led/led-7.jpg',
+        '/equipment/led/led-8.jpg',
+        '/equipment/led/led-9.jpg',
+        '/equipment/led/led-10.jpg',
+        '/equipment/led/led-11.jpg',
+      ]
+    },
+        {
+      name: 'Ronin S4 Pro',
+      category: 'Estabilizador',
+      images: [
+        '/equipment/ronin/ronin.jpg',
+        '/equipment/ronin/ronin2.jpg',
       ]
     },
   ]
@@ -169,7 +242,7 @@
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s ease;
-  max-width: 220px;
+  width: 220px;
 }
 
 .equipment-card:hover {
@@ -204,6 +277,7 @@
 .catalog-download {
   text-align: center;
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .catalog-btn {
