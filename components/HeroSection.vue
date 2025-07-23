@@ -21,7 +21,7 @@ imagen. " />
 </template>
 
 <script setup>
-import QuoteSection from '~/components/Quotesection.vue'
+import QuoteSection from '~/components/QuoteSection.vue'
 </script>
 
 <style scoped>
