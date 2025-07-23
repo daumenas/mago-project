@@ -25,7 +25,7 @@ a la audiencia y al consumidor porque también lo somos. " />
 
 <script setup>
 import CategoryDetail from '~/components/CategoryDetail.vue'
-import QuoteSection from '~/components/Quotesection.vue'
+import QuoteSection from '~/components/QuoteSection.vue'
 
 const selectedPoster = ref(null)
 
