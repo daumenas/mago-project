@@ -1,122 +1,143 @@
 <template>
-    <section id="portfolio" class="section">
-      <div class="container">
-        <h2 class="section-title">Portfolio</h2>
-  
-        <div class="poster-grid">
-          <div
-            v-for="(poster, index) in posters"
-            :key="index"
-            class="poster-card"
-            @click="openPDF(poster.pdf)"
-          >
-            <img :src="poster.image" :alt="poster.title" />
-            <div class="poster-overlay">{{ poster.title }}</div>
+  <section id="portfolio" class="section development-section">
+    <div class="container">
+      <h2 class="section-title">PORTAFOLIO</h2>
+
+      <Transition name="fade-slide" mode="out-in">
+        <div :key="currentView">
+          <!-- Category Selector -->
+          <div v-if="!selectedCategory && !selectedPoster" class="category-grid">
+            <div v-for="(cat, index) in categories" :key="index" class="category-tile" @click="selectCategory(cat)">
+              <img :src="cat.image" :alt="cat.title" class="tile-image" />
+              <div class="tile-title">{{ cat.title }}</div>
+            </div>
           </div>
+
+          <!-- Poster Grid -->
+          <div v-else-if="selectedCategory && !selectedPoster">
+            <button class="back-btn" @click="selectedCategory = null">← Back to Categories</button>
+            <div class="poster-grid">
+              <div v-for="(poster, i) in selectedCategory.posters" :key="i" class="poster-card" @click="selectPoster(poster)">
+                <img :src="poster.image" :alt="poster.title" />
+                <p class="poster-title">{{ poster.title }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Poster Detail via Component -->
+          <CategoryDetail v-else :poster="selectedPoster" @close="selectedPoster = null" />
         </div>
-      </div>
-      
-    </section>
-  </template>
-  
-  <script setup>
-  const posters = [
-    { title: 'Rise Up', image: '/portfolio/test1/gopro2.jpg', pdf: '/portfolio/riseup.pdf' },
-    { title: 'Tech Launch', image: '/portfolio/test1/gopro2.jpg', pdf: '/portfolio/tech.pdf' },
-    { title: 'Noire', image: '/portfolio/test1/gopro2.jpg', pdf: '/portfolio/noire.pdf' },
-  ]
-  
-  const openPDF = (pdf) => {
-    window.open(pdf, '_blank')
+      </Transition>
+    </div>
+  </section>
+
+  <LogoSection :logos="brandLogos" />
+</template>
+
+<script setup>
+import CategoryDetail from '~/components/CategoryDetail.vue'
+
+const categories = [
+  {
+    title: 'Producciones Originales',
+    image: '/portfolio/original.png',
+    posters: [
+      {
+        title: 'Otro Viernes De Locos',
+        image: '/portfolio/test1/testposter.jpg',
+        description: 'En esta entrega, Jamie Lee Curtis y Lindsay Lohan vuelven a interpretar a Tess y Anna Coleman. La historia continúa años después de que Tess (Curtis) y Anna (Lohan) sufrieran una crisis de identidad. Anna tiene ahora su propia hija y pronto tendrá una hijastra. Mientras afrontan los innumerables retos que surgen cuando dos familias se fusionan, Tess y Anna descubren que el rayo podría, de hecho, caer dos veces en el mismo lugar. ',
+        director: 'Nisha Ganatra',
+        producer: 'Kristin Burr, Andrew Gunn',
+        cast: 'Jamie Lee Curtis, Lindsay Lohan, Mark Harmon, Chad Michael Murray, Christina Vidal Mitchell, Haley Hudson, Rosalind Chao'
+      }
+    ]
+  },
+  {
+    title: 'Servicios de Producción',
+    image: '/portfolio/services.png',
+    posters: [
+      {
+        title: 'The Uprising',
+        image: '/portfolio/test1/gopro2.jpg',
+        description: 'A revolutionary tale set in 2090.',
+        director: 'Rosa Luna',
+        cast: 'Daniel Vega, Marie Lee'
+      }
+    ]
   }
-  </script>
-  
-  <style scoped>
-  .section {
-  background: transparent;
+]
+
+import LogoSection from '~/components/LogoSection.vue'
+
+const brandLogos = [
+  { src: '/logo/logo11.webp', alt: 'Logo 1' },
+  { src: '/logo/logo11.webp', alt: 'Logo 2' },
+  { src: '/logo/logo11.webp', alt: 'Logo 3' },
+  { src: '/logo/logo11.webp', alt: 'Logo 4' },
+]
+
+const selectedCategory = ref(null)
+const selectedPoster = ref(null)
+
+const currentView = computed(() =>
+  selectedPoster.value
+    ? 'poster-detail'
+    : selectedCategory.value
+    ? 'poster-grid'
+    : 'category-grid'
+)
+
+const selectCategory = (cat) => {
+  selectedCategory.value = cat
+}
+
+const selectPoster = (poster) => {
+  selectedPoster.value = poster
+}
+</script>
+
+<style scoped>
+.section {
   padding: 4rem 1rem;
-  }
-  
-  .container {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-  
-  .section-title {
-  text-align: center;
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  color: #caaeff;
-  }
-  
-.portfolio-section {
-  background: #432d55;
-  padding: 3rem 1rem 2rem;
-  text-align: center;
 }
-
-.portfolio-section h2,
-.portfolio-section .section-title {
-  color: #caaeff;
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
-
-.poster-grid {
+.category-grid, .poster-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
-  justify-items: center;
 }
-
-.poster-card {
-  position: relative;
-  width: 100%;
-  max-width: 320px;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.category-tile, .poster-card {
   cursor: pointer;
-}
-
-.poster-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35);
-}
-
-.poster-card img {
-  width: 100%;
-  height: 460px;
-  object-fit: cover;
-  filter: grayscale(100%);
-  transition: filter 0.5s ease;
-}
-
-.poster-card:hover img {
-  filter: grayscale(0%);
-}
-
-.poster-overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 1.25rem 1rem;
-  background: linear-gradient(to top, rgba(15, 0, 25, 0.9), rgba(0, 0, 0, 0));
-  color: #e8d7ff;
-  font-size: 1.25rem;
-  font-weight: 700;
   text-align: center;
-  opacity: 0;
-  transform: translateY(20%);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: transform 0.3s ease;
+  max-width: 450px;
 }
-
-.poster-card:hover .poster-overlay {
-  opacity: 1;
-  transform: translateY(0%);
+.category-tile:hover, .poster-card:hover {
+  transform: scale(1.05);
 }
-  </style>
-  
+.tile-image, .poster-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #caaeff;
+  margin-bottom: 2rem;
+}
+.poster-title {
+  font-size: 1.125rem;
+    line-height: 1.5rem;
+    color: white;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--primary-color, #6a0dad);
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+</style>

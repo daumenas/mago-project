@@ -1,9 +1,9 @@
 <template>
     <nav class="navbar">
-      <div class="nav-container container">
+      <div class="navbar-container">
         <div class="logo">
-        <img src="/logo.png" alt="Mago Media Logo" class="logo-img" />
-        <span>Mago Media</span>
+          <img src="/logo.png" alt="Mago Media Logo" />
+          <span class="brand-text">Mago Media</span>
         </div>
   
         <button class="menu-toggle" @click="toggleMenu">
@@ -35,12 +35,12 @@
   
   const links = [
     { label: 'Home', id: 'hero' },
-    { label: 'News', id: 'news' },
+    // { label: 'News', id: 'news' },
     { label: 'Portfolio', id: 'portfolio' },
     { label: 'Development', id: 'development' },
     { label: 'Equipment', id: 'equipment' },
     { label: 'Services', id: 'services' },
-    { label: 'About', id: 'about' },
+    // { label: 'About', id: 'about' },
     { label: 'Contact', id: 'contact' }
   ]
   
@@ -66,26 +66,51 @@ const { navigate } = useScrollTo(40) // pass custom offset if needed
   </script>
   
   <style scoped>
-  .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(12px);
-    background-color: #f1edf8;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  }
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.25rem 2rem;
+  z-index: 100;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-scrolled {
+  background-color: rgba(30, 0, 60, 0.95); /* nearly solid on scroll */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-solid {
+  background-color: rgba(20, 10, 40, 0.95); /* dark solid */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
   
   .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
+  .navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
   
-  .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-  }
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 36px;
+  margin-right: 0.5rem;
+}
   
   .nav-links {
     display: flex;
@@ -95,7 +120,7 @@ const { navigate } = useScrollTo(40) // pass custom offset if needed
   
   .nav-links li a {
     text-decoration: none;
-    color: var(--text-color);
+    color: #caaeff;
     font-weight: 600;
     transition: color 0.3s ease;
     position: relative;
@@ -207,6 +232,10 @@ const { navigate } = useScrollTo(40) // pass custom offset if needed
   width: 64px;
   height: 64px;
   object-fit: contain;
+}
+
+.brand-text {
+  color: #caaeff; /* vibrant purple for your brand */
 }
   </style>
   

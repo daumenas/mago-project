@@ -12,7 +12,17 @@
       </div>
     </div>
   </section>
+
+  <QuoteSection quote="El storytelling es parte vital en el funcionamiento de la maquinaria de Mago. 
+Imprimimos a todo lo que hacemos un sello caracterís co que solo se puede lograr 
+a través de crear una historia entorno a y para todas nuestras producciones, 
+aportándole un toque cinematográfico vanguardista que va desde el papel, hasta la 
+imagen. " />
 </template>
+
+<script setup>
+import QuoteSection from '~/components/Quotesection.vue'
+</script>
 
 <style scoped>
 .hero {
