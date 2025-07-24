@@ -1,9 +1,9 @@
 <template>
-  <section class="hero" id="hero">
+  <section class="hero">
     <video autoplay muted loop playsinline class="hero-video">
       <source src="/homepage/trailer.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
     </video>
+
     <div class="hero-overlay">
       <div class="hero-content">
         <h1>Visual Storytelling That Inspires</h1>
@@ -12,17 +12,7 @@
       </div>
     </div>
   </section>
-
-  <QuoteSection quote="El storytelling es parte vital en el funcionamiento de la maquinaria de Mago. 
-Imprimimos a todo lo que hacemos un sello caracterís co que solo se puede lograr 
-a través de crear una historia entorno a y para todas nuestras producciones, 
-aportándole un toque cinematográfico vanguardista que va desde el papel, hasta la 
-imagen. " />
 </template>
-
-<script setup>
-import QuoteSection from '~/components/QuoteSection.vue'
-</script>
 
 <style scoped>
 .hero {
@@ -30,8 +20,6 @@ import QuoteSection from '~/components/QuoteSection.vue'
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: transparent;
-  padding: 4rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,20 +44,20 @@ import QuoteSection from '~/components/QuoteSection.vue'
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   padding: 2rem;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .hero-content {
-  color: white;
   max-width: 800px;
-  margin: 0 auto;
+  color: white;
   animation: fadeIn 1.5s ease-out;
+  padding: 1rem;
 }
 
 .hero-content h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   line-height: 1.2;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
@@ -101,10 +89,9 @@ import QuoteSection from '~/components/QuoteSection.vue'
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* 🌐 Responsive Tweaks */
 @media (max-width: 1024px) {
   .hero-content h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .hero-content p {
@@ -114,20 +101,15 @@ import QuoteSection from '~/components/QuoteSection.vue'
 
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .hero-content p {
     font-size: 1rem;
   }
 
-  .hero {
-    padding: 2rem 1rem;
-  }
-
   .hero-overlay {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 }
 </style>
-
