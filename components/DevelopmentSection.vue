@@ -76,6 +76,7 @@ const selectPoster = (poster) => {
   color: #caaeff;
   margin-bottom: 2rem;
 }
+
 .poster-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -90,9 +91,10 @@ const selectPoster = (poster) => {
   transform: scale(1.05);
 }
 .poster-card img {
-  width: 450px;
+  max-width: -webkit-fill-available;
   border-radius: 12px;
-  height: 600px;
+  height: auto;
+  object-fit: cover;
 }
 .poster-title {
   margin-top: 0.75rem;

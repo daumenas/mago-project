@@ -32,6 +32,9 @@ import QuoteSection from '~/components/QuoteSection.vue'
   overflow: hidden;
   background: transparent;
   padding: 4rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-video {
@@ -45,9 +48,7 @@ import QuoteSection from '~/components/QuoteSection.vue'
 }
 
 .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   z-index: 1;
   width: 100%;
   height: 100%;
@@ -56,12 +57,14 @@ import QuoteSection from '~/components/QuoteSection.vue'
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .hero-content {
   color: white;
   max-width: 800px;
+  margin: 0 auto;
   animation: fadeIn 1.5s ease-out;
 }
 
@@ -86,6 +89,7 @@ import QuoteSection from '~/components/QuoteSection.vue'
   border-radius: 8px;
   text-decoration: none;
   transition: background 0.3s;
+  display: inline-block;
 }
 
 .cta-button:hover {
@@ -97,13 +101,33 @@ import QuoteSection from '~/components/QuoteSection.vue'
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* 🌐 Responsive Tweaks */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .hero-content p {
     font-size: 1rem;
   }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero-overlay {
+    padding: 1.5rem;
+  }
 }
 </style>
+
