@@ -1,6 +1,6 @@
 <template>
   <div class="poster-detail">
-    <button class="back-btn" @click="$emit('close')">← Back to Posters</button>
+    <button class="back-btn" @click="$emit('close')">← Volver a los carteles</button>
     <div class="poster-detail-content">
       <img :src="poster.image" class="poster-large" :alt="poster.title" />
       <div class="poster-info">

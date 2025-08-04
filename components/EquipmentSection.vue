@@ -1,13 +1,13 @@
 <template>
     <section id="equipment" class="section">
       <div class="container">
-        <h2 class="section-title">Equipment Rental</h2>
+        <h2 class="section-title">Alquiler de equipos</h2>
         <p class="section-description">
-          Click any item to view its gallery.
+          Haz clic en cualquier elemento para ver su galería.
         </p>
         <div class="catalog-download">
           <a href="/equipment/Rental-Catalog.pdf" target="_blank" class="catalog-btn">
-            Download Full Equipment Catalog (PDF)
+            Descargar catálogo completo de equipos. (PDF)
           </a>
         </div>
   
@@ -214,7 +214,7 @@
 
 .section-title {
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: 700;
   color: #d3b6ff;

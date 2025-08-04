@@ -10,7 +10,14 @@ import {
   faBullhorn,
   faBroadcastTower,
   faEnvelope,
-  faPhone
+  faPhone,
+  faClapperboard,
+  faPuzzlePiece,
+  faCameraAlt,
+  faSlidersH,
+  faMagic,
+  faCog,
+  faMarker,
 } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram, faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
@@ -27,7 +34,14 @@ library.add(
   faPhone,
   faInstagram,
   faFacebook,
-  faYoutube
+  faYoutube,
+  faClapperboard,
+  faPuzzlePiece,
+  faCameraAlt,
+  faSlidersH,
+  faMagic,
+  faCog,
+  faMarker,
 )
 
 export default defineNuxtPlugin((nuxtApp) => {

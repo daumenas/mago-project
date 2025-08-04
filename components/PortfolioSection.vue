@@ -15,7 +15,7 @@
 
           <!-- Poster Grid -->
           <div v-else-if="selectedCategory && !selectedPoster">
-            <button class="back-btn" @click="selectedCategory = null">← Back to Categories</button>
+            <button class="back-btn" @click="selectedCategory = null">← Volver a Categorías</button>
             <div class="poster-grid">
               <div v-for="(poster, i) in selectedCategory.posters" :key="i" class="poster-card" @click="selectPoster(poster)">
                 <img :src="poster.image" :alt="poster.title" />

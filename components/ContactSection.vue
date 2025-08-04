@@ -1,75 +1,111 @@
 <template>
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <h2 class="section-title">Get in Touch</h2>
-      <p class="contact-description">
-        We'd love to hear from you! Whether it’s project inquiries, collaborations, or just a friendly hello —
-        drop us a message.
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+      <h2 class="contact-title">Contacto</h2>
+      <p class="contact-subtitle">
+        Estaremos encantados de saber de usted, ya sea para consultas de proyectos, colaboraciones o simplemente para saludarnos.
       </p>
 
-      <div class="contact-actions">
-        <button class="contact-btn" @click="sendEmail">
-          Send Email
-        </button>
+      <div class="contact-email-block">
+        <p class="highlight">¿Prefieres el correo electrónico?</p>
+        <a href="mailto:anthony@magomedia.mx" class="contact-email">anthony@magomedia.mx</a>
+        <a href="mailto:anthony@magomedia.mx" class="cta-button">Enviar correo electrónico</a>
+      </div>
+
+      <div class="contact-info-block">
+        <div class="info-item">
+          <FontAwesomeIcon icon="marker" class="contact-icon" />
+          <span>Dirección: Concepción Beistegui #203, int. 301, colonia del Valle Centro, Benito Juárez, 
+03100, Ciudad de México, México.  </span>
+        </div>
+        <div class="info-item">
+          <FontAwesomeIcon icon="phone" class="contact-icon" />
+          <span>5633458406</span>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
-<script setup>
-const sendEmail = () => {
-  const email = "hello@yourcompany.com"
-  window.location.href = `mailto:${email}`
-}
-</script>
-  
-  <style scoped>
-  .section {
-  background: transparent;
-  padding: 4rem 1rem;
-  }
-  
-  .contact-section {
-  background: #f5f2fb;
-  padding: 4rem 1rem;
+
+<style scoped>
+.contact-section {
+  background: #f4eefc;
+  padding: 4rem 1.5rem;
   text-align: center;
 }
 
-.section-title {
-  font-size: 2.2rem;
+.contact-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.contact-title {
+  font-size: 2rem;
   font-weight: 700;
-  color: #3a235d;
+  color: #2f004f;
   margin-bottom: 1rem;
 }
 
-.contact-description {
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  color: #4a3269;
-  font-size: 1.05rem;
-  line-height: 1.6;
+.contact-subtitle {
+  color: #4a3a5a;
+  font-size: 1.125rem;
+  margin-bottom: 2.5rem;
 }
 
-.contact-actions {
-  display: flex;
-  justify-content: center;
+.contact-email-block {
+  margin-bottom: 2rem;
 }
 
-.contact-btn {
-  background: var(--primary-color, #6a0dad);
-  color: white;
-  padding: 0.75rem 2rem;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
+.highlight {
   font-weight: 600;
-  transition: background 0.3s ease;
+  font-size: 1.1rem;
+  color: #3f1d5b;
+  margin-bottom: 0.5rem;
 }
 
-.contact-btn:hover {
+.contact-email {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #6a0dad;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #6a0dad;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
   background: #4e2392;
 }
 
-  </style>
-  
+.contact-info-block {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #3f1d5b;
+  font-weight: 500;
+}
+
+.contact-icon {
+  color: #6a0dad;
+  font-size: 1.1rem;
+}
+</style>

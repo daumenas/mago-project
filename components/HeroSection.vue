@@ -1,14 +1,14 @@
 <template>
-  <section class="hero">
+  <section class="hero" id="hero">
     <video autoplay muted loop playsinline class="hero-video">
       <source src="/homepage/trailer.mp4" type="video/mp4" />
     </video>
 
     <div class="hero-overlay">
       <div class="hero-content">
-        <h1>Visual Storytelling That Inspires</h1>
-        <p>High-end media production for music, film, and commercial projects</p>
-        <a href="#portfolio" class="cta-button">Explore Portfolio</a>
+        <h1>Narrativa visual que inspira</h1>
+        <p>Producción audiovisual de alto nivel para proyectos de música, cine y publicidad</p>
+        <a href="#portfolio" class="cta-button">Explorar portafolio</a>
       </div>
     </div>
   </section>

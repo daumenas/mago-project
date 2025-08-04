@@ -30,11 +30,11 @@ const toggleMenu = () => (isMenuOpen.value = !isMenuOpen.value)
 
 const links = [
   { label: 'Home', id: 'hero' },
-  { label: 'Portfolio', id: 'portfolio' },
-  { label: 'Development', id: 'development' },
-  { label: 'Equipment', id: 'equipment' },
-  { label: 'Services', id: 'services' },
-  { label: 'Contact', id: 'contact' }
+  { label: 'Portafolio', id: 'portfolio' },
+  { label: 'Desarrollo', id: 'development' },
+  { label: 'Equipo', id: 'equipment' },
+  { label: 'Servicios', id: 'services' },
+  { label: 'Contacto', id: 'contact' }
 ]
 
 const activeSection = ref(null)
