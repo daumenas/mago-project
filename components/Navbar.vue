@@ -2,8 +2,8 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="logo">
-        <img src="/logo.png" alt="Mago Media Logo" />
-        <span class="brand-text">Mago Media</span>
+        <img src="/logo.png" alt="Mago Media Logo" @click.prevent="navigate('hero')" />
+        <span class="brand-text" @click.prevent="navigate('hero')">Mago Media</span>
       </div>
 
       <button class="menu-toggle" @click="toggleMenu">
