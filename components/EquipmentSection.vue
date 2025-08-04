@@ -7,7 +7,7 @@
         </p>
         <div class="catalog-download">
           <a href="/equipment/Rental-Catalog.pdf" target="_blank" class="catalog-btn">
-            Descargar catálogo completo de equipos. (PDF)
+            Catálogo completo de equipos. (PDF)
           </a>
         </div>
   
@@ -278,9 +278,11 @@
   text-align: center;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  width: 100%;
 }
 
 .catalog-btn {
+  display: inline-block;
   background: var(--primary-color, #6a0dad);
   color: white;
   padding: 0.75rem 1.5rem;
@@ -288,6 +290,9 @@
   text-decoration: none;
   font-weight: 600;
   transition: background 0.3s;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .catalog-btn:hover {
