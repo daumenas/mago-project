@@ -61,7 +61,6 @@ defineProps({
 .logo-container img {
   height: 80px;
   width: 120px;
-  filter: brightness(0) invert(1); /* makes light logos visible on dark bg */
   opacity: 0.8;
   transition: opacity 0.2s ease;
 }

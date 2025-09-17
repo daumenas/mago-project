@@ -70,10 +70,10 @@ const categories = [
 import LogoSection from '~/components/LogoSection.vue'
 
 const brandLogos = [
-  { src: '/logo/logo11.webp', alt: 'Logo 1' },
-  { src: '/logo/logo11.webp', alt: 'Logo 2' },
-  { src: '/logo/logo11.webp', alt: 'Logo 3' },
-  { src: '/logo/logo11.webp', alt: 'Logo 4' },
+  { src: '/logo/amazon_prime_logo.webp', alt: 'Logo 1' },
+  { src: '/logo/CECC_logo.webp', alt: 'Logo 2' },
+  { src: '/logo/lol_logo.webp', alt: 'Logo 3' },
+  { src: '/logo/menina.webp', alt: 'Logo 4' },
 ]
 
 const selectedCategory = ref(null)
