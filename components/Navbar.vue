@@ -32,8 +32,8 @@ const links = [
   { label: 'Home', id: 'hero' },
   { label: 'Portafolio', id: 'portfolio' },
   { label: 'Desarrollo', id: 'development' },
-  { label: 'Rental', id: 'equipment' },
   { label: 'Servicios', id: 'services' },
+  { label: 'Rental', id: 'equipment' },
   { label: 'Contacto', id: 'contact' }
 ]
 
