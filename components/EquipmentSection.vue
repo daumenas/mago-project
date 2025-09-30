@@ -52,11 +52,11 @@
       name: 'Adaptadop Sony XLR',
       category: 'Cámaras',
       images: [
-        '/equipment/adaptadorsony/1.png',
-        '/equipment/adaptadorsony/2.png',
-        '/equipment/adaptadorsony/3.png',
-        '/equipment/adaptadorsony/4.png',
-        '/equipment/adaptadorsony/5.png',
+        '/equipment/adaptadorsony/adaptadorsony1.jpg',
+        '/equipment/adaptadorsony/adaptadorsony2.jpg',
+        '/equipment/adaptadorsony/adaptadorsony3.jpg',
+        '/equipment/adaptadorsony/adaptadorsony4.jpg',
+        '/equipment/adaptadorsony/adaptadorsony5.jpg',
       ]
     },
         {

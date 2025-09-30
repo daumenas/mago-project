@@ -1,7 +1,7 @@
 <template>
   <section class="hero" id="hero">
     <video autoplay muted loop playsinline class="hero-video">
-      <source src="/homepage/trailer.mp4" type="video/mp4" />
+      <source src="/homepage/V3.mp4" type="video/mp4" />
     </video>
 
     <div class="hero-overlay">

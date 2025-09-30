@@ -17,8 +17,8 @@
           <div v-else-if="selectedCategory && !selectedPoster">
             <button class="back-btn" @click="selectedCategory = null">← Volver a Categorías</button>
             <div class="poster-grid">
-              <div v-for="(poster, i) in selectedCategory.posters" :key="i" class="poster-card" @click="selectPoster(poster)">
-                <img :src="poster.image" :alt="poster.title" />
+              <div v-for="(poster, i) in selectedCategory.posters" :key="i" class="poster-card inside-poster" @click="selectPoster(poster)">
+                <img :src="poster.image" :alt="poster.title" class="set-size-px" />
                 <p class="poster-title">{{ poster.title }}</p>
               </div>
             </div>
@@ -43,12 +43,10 @@ const categories = [
     image: '/portfolio/original.png',
     posters: [
       {
-        title: 'Otro Viernes De Locos',
-        image: '/portfolio/test1/testposter.jpg',
-        description: 'En esta entrega, Jamie Lee Curtis y Lindsay Lohan vuelven a interpretar a Tess y Anna Coleman. La historia continúa años después de que Tess (Curtis) y Anna (Lohan) sufrieran una crisis de identidad. Anna tiene ahora su propia hija y pronto tendrá una hijastra. Mientras afrontan los innumerables retos que surgen cuando dos familias se fusionan, Tess y Anna descubren que el rayo podría, de hecho, caer dos veces en el mismo lugar. ',
-        director: 'Nisha Ganatra',
-        producer: 'Kristin Burr, Andrew Gunn',
-        cast: 'Jamie Lee Curtis, Lindsay Lohan, Mark Harmon, Chad Michael Murray, Christina Vidal Mitchell, Haley Hudson, Rosalind Chao'
+        format: 'Podcast',
+        title: 'A Punto de Ebullición',
+        image: '/portfolio/punto/punto.png',
+        description: 'A Punto de Ebullición es un Podcast creado y conducido por Gary Centeno, en el cual este polémico y célebre host se abrirá deconstruirá ante los ojos de los espectadores para mostrar a un Gary real, true, que como en la televisión, no teme expresarse, pero esta vez censura, al tiempo que prepara platillos de los puntos más exóticos y variados de nuestro diverso continente.',
       }
     ]
   },
@@ -57,12 +55,15 @@ const categories = [
     image: '/portfolio/services.png',
     posters: [
       {
-        title: 'The Uprising',
-        image: '/portfolio/test1/gopro2.jpg',
-        description: 'A revolutionary tale set in 2090.',
-        director: 'Rosa Luna',
-        cast: 'Daniel Vega, Marie Lee'
-      }
+        title: 'LOL: Sexta Temporada',
+        image: '/portfolio/lol/lol.jpeg',
+        description: 'B-Roll para la sexta temporada de LOL.',
+      },
+      {
+        title: 'Menina CECC',
+        image: '/portfolio/menina/dresslogo_dark.webp',
+        description: 'Planificación, creatividad, desarrollo y dirección de pasarela de modas que fusionó las marcas Menina y CECC en un evento donde el lujo, la magia y la elegancia protagonizaron la noche. ',
+      },
     ]
   }
 ]
@@ -73,7 +74,7 @@ const brandLogos = [
   { src: '/logo/amazon_prime_logo.webp', alt: 'Logo 1' },
   { src: '/logo/CECC_logo.webp', alt: 'Logo 2' },
   { src: '/logo/lol_logo.webp', alt: 'Logo 3' },
-  { src: '/logo/menina.webp', alt: 'Logo 4' },
+  { src: '/logo/dresslogo_dark.webp', alt: 'Logo 4' },
 ]
 
 const selectedCategory = ref(null)
@@ -110,6 +111,17 @@ const selectPoster = (poster) => {
   text-align: center;
   transition: transform 0.3s ease;
   max-width: 450px;
+}
+.inside-poster {
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease;
+  max-width: 250px;
+}
+.set-size-px {
+  object-fit: scale-down;
+  width: 250px;
+  height: 250px;;
 }
 .category-tile:hover, .poster-card:hover {
   transform: scale(1.05);

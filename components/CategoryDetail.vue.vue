@@ -7,10 +7,16 @@
         <h3>{{ poster.title }}</h3>
         <p class="description">{{ poster.description }}</p>
         <div class="meta">
-          <p><strong>Dirigida por:</strong> {{ poster.director }}</p>
-          <p><strong>Producida por:</strong> {{ poster.producer }}</p>
-          <p><strong>Reparto:</strong> {{ poster.cast }}</p>
+          <p v-if="poster.format"><strong>Formato:</strong> {{ poster.format }}</p>
+          <p v-if="poster.director"><strong>Dirigida por:</strong> {{ poster.director }}</p>
+          <p v-if="poster.producer"><strong>Producida por:</strong> {{ poster.producer }}</p>
+          <p v-if="poster.cast"><strong>Reparto:</strong> {{ poster.cast }}</p>
         </div>
+        <div v-if="poster.pdf" class="pdf-download">
+          <a :href="`/portfolio/pdf/${poster.pdf}`" target="_blank" class="pdf-btn">
+            Descarga el pitch completo en PDF
+          </a>
+       </div>
       </div>
     </div>
   </div>
@@ -84,5 +90,22 @@ defineProps({
   font-weight: 600;
   cursor: pointer;
   margin-bottom: 2rem;
+}
+
+.pdf-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #6a0dad;   /* purple background */
+  color: #fff;           /* white text */
+  font-weight: bold;
+  text-decoration: none; /* remove underline */
+  border-radius: 6px;    /* rounded corners */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.pdf-btn:hover {
+  background: #520b9b;   /* darker purple on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 </style>
