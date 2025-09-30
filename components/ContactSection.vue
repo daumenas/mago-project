@@ -14,14 +14,14 @@
 
       <div class="contact-info-block">
         <div class="info-item">
-          <FontAwesomeIcon icon="marker" class="contact-icon" />
-          <span>Dirección: Concepción Beistegui #203, int. 301, colonia del Valle Centro, Benito Juárez, 
-03100, Ciudad de México, México.  </span>
-        </div>
-        <div class="info-item">
           <FontAwesomeIcon icon="phone" class="contact-icon" />
           <span>5633458406</span>
         </div>
+      </div>
+      <div style="font-size: smaller; margin-top: 50px;" class="info-item">
+          <FontAwesomeIcon icon="marker" class="contact-icon" />
+          <span>Dirección: Concepción Beistegui #203, int. 301, colonia del Valle Centro, Benito Juárez, 
+03100, Ciudad de México, México.  </span>
       </div>
     </div>
   </section>
@@ -31,7 +31,7 @@
 <style scoped>
 .contact-section {
   background: #f4eefc;
-  padding: 4rem 1.5rem;
+  /* padding: 4rem 1.5rem; */
   text-align: center;
 }
 

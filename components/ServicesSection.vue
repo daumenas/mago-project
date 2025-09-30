@@ -6,7 +6,7 @@
         <i>Nuestros servicios de producción se adecúan a las necesidades particulares de cada proyecto.</i>
       </p>
       <p class="section-description">
-        En Mago estamos convencidos de que las redes sociales, la AI y todo lo que nace a partir de
+        En Mago Media estamos convencidos de que las redes sociales, la AI y todo lo que nace a partir de
         y para el internet, son herramientas valiosísimas para llegar a las personas con un mensaje
         claro y puntual. Nuestra misión principal es realizar y colocar el mensaje en el lugar indicado
         para su correcta transmisión a las personas a las que tiene que llegar.
@@ -87,7 +87,7 @@ const bottomServices = allServices.slice(2)
 <style scoped>
 .section {
   text-align: center;
-  padding: 4rem 1.5rem;
+  /* padding: 4rem 1.5rem; */
 }
 
 .section-title {

@@ -99,12 +99,17 @@ const selectPoster = (poster) => {
 
 <style scoped>
 .section {
-  padding: 4rem 1rem;
+  /* padding: 4rem 1rem; */
 }
 .category-grid, .poster-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
+}
+.category-grid:has(> :only-child),
+.poster-grid:has(> :only-child) {
+  grid-template-columns: 1fr;
+  justify-items: center;
 }
 .category-tile, .poster-card {
   cursor: pointer;

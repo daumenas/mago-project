@@ -24,7 +24,7 @@ defineProps({
 <style scoped>
 .logo-strip {
   background-color: rgba(255, 255, 255, 0.04);
-  /* padding: 2rem 1rem; */
+  padding: 2rem 1rem;
   /* margin: 4rem auto; */
   border-radius: 12px;
   width: 100%;

@@ -32,7 +32,7 @@ const links = [
   { label: 'Home', id: 'hero' },
   { label: 'Portafolio', id: 'portfolio' },
   { label: 'Desarrollo', id: 'development' },
-  { label: 'Equipo', id: 'equipment' },
+  { label: 'Rental', id: 'equipment' },
   { label: 'Servicios', id: 'services' },
   { label: 'Contacto', id: 'contact' }
 ]

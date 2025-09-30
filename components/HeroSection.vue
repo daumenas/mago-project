@@ -7,13 +7,13 @@
     <div class="hero-overlay">
       <div class="hero-content">
         <h1>Narrativa visual que inspira</h1>
-        <p>Producción audiovisual de alto nivel para proyectos de música, cine y publicidad</p>
-        <a href="#portfolio" class="cta-button">Explorar portafolio</a>
+        <p>Producción audiovisual de alto nivel para proyectos de cine, televisión, web, música y publicidad</p>
       </div>
     </div>
   </section>
-  <QuoteSection quote="El storytelling es parte vital en el funcionamiento de la maquinaria de Mago. 
-Imprimimos a todo lo que hacemos un sello caracterís co que solo se puede lograr 
+  <div class="blend"></div>
+  <QuoteSection quote="El storytelling es parte vital en el funcionamiento de la maquinaria de Mago Media. 
+Imprimimos a todo lo que hacemos un sello característico que solo se puede lograr 
 a través de crear una historia entorno a y para todas nuestras producciones, 
 aportándole un toque cinematográfico vanguardista que va desde el papel, hasta la 
 imagen. " />
@@ -32,6 +32,18 @@ import QuoteSection from '~/components/QuoteSection.vue'
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.blend {
+  height: 50px;  /* adjust thickness of the transition zone */
+  background: linear-gradient(
+    to bottom,
+    #0a070c 0%,
+    #1b1321 25%,
+    #271831 50%,
+    #2e1d38 75%,
+    #36243d 100%
+  );
 }
 
 .hero-video {

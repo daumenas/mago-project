@@ -37,7 +37,7 @@ const categories = [
         image: '/portfolio/12deseos/12deseos_2.jpg',
         description: 'Alejandro y Beto son dos caras de una misma moneda: uno rico y otro pobre, unidos por la terrible enfermedad degenerativa y terminal que los aqueja a ambos. Tanto Beto, optimista y dicharachero, como Alejandro, serio y solitario, deciden unir fuerzas y darle la vuelta a su situación, ayudándose a cumplir cada uno de los 12 deseos que, tanto el uno como el otro, plasman en una lista. Deseos que vienen con una carga emocional y aventurera que los meten en las más locas y arriesgadas experiencias de vida, que al final están lo que están coleccionando. Después de mucho enseñarse y mucho aprenderse, Alejandro y Beto tendrán que despedirse el uno del otro, pero su mágica amistad los encaminará a ayudarse a cumplir el último deseo de cada uno, cosa que los une de por vida: vivir y ayudar al otro a vivir.',
         pdf: '12Deseos.pdf',
-        format: 'Serie Web',
+        format: 'Serie',
       },
       {
         title: 'Gente de Acero',
@@ -79,7 +79,7 @@ const selectPoster = (poster) => {
 
 <style scoped>
 .section {
-  padding: 4rem 1rem;
+  /* padding: 4rem 1rem; */
 }
 .section-title {
   text-align: center;

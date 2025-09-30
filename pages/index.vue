@@ -4,8 +4,8 @@
     <!-- <NewsSection /> -->
     <PortfolioSection />
     <DevelopmentSection />
-    <EquipmentSection />
     <ServicesSection />
+    <EquipmentSection />
     <!-- <AboutSection /> -->
     <ContactSection />
   </div>

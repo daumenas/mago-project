@@ -1,12 +1,11 @@
 <template>
     <section id="equipment" class="section">
       <div class="container">
-        <h2 class="section-title">Alquiler de equipos</h2>
+        <h2 class="section-title">RENTAL</h2>
         <p class="section-description">
-          Haz clic en cualquier elemento para ver su galería.
         </p>
         <div class="catalog-download">
-          <a href="/equipment/Rental-Catalog.pdf" target="_blank" class="catalog-btn">
+          <a href="/equipment/RENTAL_MAGO.pdf" target="_blank" class="catalog-btn">
             Catálogo completo de equipos. (PDF)
           </a>
         </div>
@@ -88,7 +87,7 @@
     },
     {
       name: 'Neewer Top Handle',
-      category: 'Accesorios para cámaras',
+      category: 'Estabilizador',
       images: [
         '/equipment/tophandle/tophandle.jpg',
         '/equipment/tophandle/tophandle-2.jpg',
@@ -115,7 +114,7 @@
     },
         {
       name: 'Sony 24-70MM',
-      category: 'Accesorios para cámaras',
+      category: 'Óptica',
       images: [
         '/equipment/sony24/sony24-1.jpg',
         '/equipment/sony24/sony24-2.jpg',
@@ -126,7 +125,7 @@
     },
         {
       name: 'Tamron 17-28MM',
-      category: 'Accesorios para cámaras',
+      category: 'Óptica',
       images: [
         '/equipment/tamron/tamron-1.jpg',
         '/equipment/tamron/tamron-2.jpg',
@@ -134,8 +133,8 @@
       ]
     },
         {
-      name: 'Sony Telefono',
-      category: 'Accesorios para cámaras',
+      name: 'Sony Teléfono',
+      category: 'Óptica',
       images: [
         '/equipment/telefono/telefono-1.jpg',
         '/equipment/telefono/telefono-2.jpg',
@@ -204,7 +203,7 @@
   <style scoped>
 .section {
   background: transparent;
-  padding: 4rem 1rem;
+  /* padding: 4rem 1rem; */
 }
 
 .container {
@@ -213,11 +212,15 @@
 }
 
 .section-title {
-  text-align: center;
+  /* text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: 700;
-  color: #d3b6ff;
+  color: #d3b6ff; */
+  text-align: center;
+  font-size: 2rem;
+  color: #E5C7FF;
+  margin-bottom: 2rem;
 }
 
 .section-description {
