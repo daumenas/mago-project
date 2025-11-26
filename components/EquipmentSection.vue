@@ -5,7 +5,7 @@
         <p class="section-description">
         </p>
         <div class="catalog-download">
-          <a href="/equipment/RENTAL_MAGO.pdf" target="_blank" class="catalog-btn">
+          <a href="/equipment/Rental_Mago_Logo.pdf" target="_blank" class="catalog-btn">
             Catálogo completo de equipos. (PDF)
           </a>
         </div>
