@@ -18,13 +18,9 @@
           </a>
        </div>
        <div v-if="poster.link" class="pdf-download">
-          <a
-    :href="poster.link"
-    target="_blank"
-    class="pdf-btn"
-  >
-    Abrir presentación
-  </a>
+        <NuxtLink to="/podcast-medico" class="pdf-btn">
+          Abrir presentación
+        </NuxtLink>
        </div>
       </div>
     </div>

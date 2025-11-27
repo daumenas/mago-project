@@ -2,8 +2,8 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="logo">
-        <img src="/logo.png" alt="Mago Media Logo" @click.prevent="navigate('hero')" />
-        <span class="brand-text" @click.prevent="navigate('hero')">Mago Media</span>
+<img src="/logo.png" alt="Mago Media Logo" @click.prevent="handleNavigate('hero')" />
+<span class="brand-text" @click.prevent="handleNavigate('hero')">Mago Media</span>
       </div>
 
       <button class="menu-toggle" @click="toggleMenu">
@@ -12,7 +12,11 @@
 
       <ul :class="['nav-links', { open: isMenuOpen }]">
         <li v-for="(link, index) in links" :key="index">
-          <a href="#" @click.prevent="navigate(link.id)" :class="{ active: activeSection === link.id }">
+          <a
+            href="#"
+            @click.prevent="handleNavigate(link.id)"
+            :class="{ active: activeSection === link.id }"
+          >
             {{ link.label }}
           </a>
         </li>
@@ -21,9 +25,13 @@
   </nav>
 </template>
 
-<script setup>
-import { ref, onMounted, onUnmounted, computed } from 'vue'
+<script lang="ts" setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { useScrollTo } from '@/composables/useScrollTo'
+
+const route = useRoute()
+const router = useRouter()
 
 const isMenuOpen = ref(false)
 const toggleMenu = () => (isMenuOpen.value = !isMenuOpen.value)
@@ -37,8 +45,22 @@ const links = [
   { label: 'Contacto', id: 'contact' }
 ]
 
-const activeSection = ref(null)
+const activeSection = ref<string | null>(null)
 const { navigate } = useScrollTo(40)
+
+// NEW: smart navigate that works on all pages
+const handleNavigate = async (id: string) => {
+  isMenuOpen.value = false
+
+  if (route.path !== '/') {
+    // go to home first, then scroll to the section
+    await router.push({ path: '/', hash: `#${id}` })
+    // small timeout so DOM is ready, then do smooth scroll
+    requestAnimationFrame(() => navigate(id))
+  } else {
+    navigate(id)
+  }
+}
 
 const updateActiveSection = () => {
   const scrollY = window.scrollY
@@ -55,6 +77,7 @@ const updateActiveSection = () => {
 
 onMounted(() => window.addEventListener('scroll', updateActiveSection))
 onUnmounted(() => window.removeEventListener('scroll', updateActiveSection))
+
 </script>
 
 
