@@ -66,6 +66,13 @@ const categories = [
         pdf: 'Carpeta.pdf',
         format: 'Serie Musical',
       },
+      {
+        title: 'Podcast Médicos',
+        image: '/portfolio/podcast_professional/podcastProfessional.png',
+        description: 'Crea contenido de alto impacto que posicione tu marca y conecte con tu audiencia de manera auténtica y profesional.',
+        link: 'https://gamma.app/docs/Podcast-Medicos-Mago-Media-7z11zlfptx15apy?mode=doc',
+        format: 'Podcast',
+      },
     ]
   }
 ]

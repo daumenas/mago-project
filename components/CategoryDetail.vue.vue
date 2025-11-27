@@ -17,6 +17,15 @@
             Descarga el pitch completo en PDF
           </a>
        </div>
+       <div v-if="poster.link" class="pdf-download">
+          <a
+    :href="poster.link"
+    target="_blank"
+    class="pdf-btn"
+  >
+    Abrir presentación
+  </a>
+       </div>
       </div>
     </div>
   </div>
