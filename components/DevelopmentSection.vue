@@ -71,6 +71,9 @@ const categories = [
         image: '/portfolio/podcast_professional/podcastProfessional.png',
         description: 'Crea contenido de alto impacto que posicione tu marca y conecte con tu audiencia de manera auténtica y profesional.',
         link: 'https://gamma.app/docs/Podcast-Medicos-Mago-Media-7z11zlfptx15apy?mode=doc',
+        linkName: 'Presentación general',
+        link2: 'https://gamma.app/docs/Contenido-Audiovisual-para-Redes-Sociales-w4n9szhzqom9e6r',
+        link2Name: 'Doctora María del Sol',
         format: 'Podcast',
       },
     ]

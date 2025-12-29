@@ -17,10 +17,27 @@
             Descarga el pitch completo en PDF
           </a>
        </div>
-       <div v-if="poster.link" class="pdf-download">
+       <div style="display: flex;">
+        <div style="margin-right: 3px;" v-if="poster.link" class="pdf-download">
         <NuxtLink to="/podcast-medico" class="pdf-btn">
-          Abrir presentación
+          <p v-if="poster.linkName">
+            {{ poster.linkName }}
+          </p>
+          <p v-else>
+            Abrir presentación
+          </p>
         </NuxtLink>
+       </div>
+       <div v-if="poster.link2" class="pdf-download">
+        <NuxtLink to="/podcast-medico-individual" class="pdf-btn">
+          <p v-if="poster.link2Name">
+            {{ poster.link2Name }}
+          </p>
+          <p v-else>
+            Abrir presentación
+          </p>
+        </NuxtLink>
+       </div>
        </div>
       </div>
     </div>
